@@ -1,0 +1,5 @@
+# List: ordered, mutable, allow duplicate elements, allow diff type, use index
+	- when copy a list, ( list_cpy = list_org ) both list refer to the same list inside the memory, fix: list_cpy = list_org.copy()
+	- creating new list from an existing list with expression: list_new = [i*i for i in list_old]
+
+# Tuple : ordered, immutable, allow duplicate elements, allow diff type, use index
