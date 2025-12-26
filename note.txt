@@ -3,3 +3,6 @@
 	- creating new list from an existing list with expression: list_new = [i*i for i in list_old]
 
 # Tuple : ordered, immutable, allow duplicate elements, allow diff type, use index
+
+#Terminologies
+-Immutable : means cannot be changed after it’s created, cannot add / remove / modify existing elements
