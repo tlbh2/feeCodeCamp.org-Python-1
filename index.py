@@ -141,3 +141,110 @@ print("setA and setB are disjoint:", setA.isdisjoint(setB))
 setB = set(setA) 
 setB = setA.copy()
 print(setB)
+
+print("--------------------")
+# Frozen Set
+myFrozenSet = frozenset([1, 2, 3, 4 , 5])
+print(myFrozenSet)      
+for i in myFrozenSet:
+    print(i)        
+if 3 in myFrozenSet:
+    print("3 is in the frozen set")
+else:
+    print("3 is not in the frozen set")
+print(myFrozenSet.union({6, 7, 8}))
+print(myFrozenSet.intersection({4, 5, 6, 7}))   
+print(myFrozenSet.difference({2, 3, 4}))
+print(myFrozenSet.symmetric_difference({5, 6, 7}))
+
+print("--------------------")
+# String
+myString = "Hello, World!"
+print(myString)
+
+for char in myString:
+    print(char)
+
+myString1 = "how are you doing ?"
+listString = myString1.split()
+print("List of words:", listString)
+
+print("Length of string:", len(myString))
+print("Substring (0-5):", myString[0:5])
+print("Uppercase:", myString.upper())
+print("Lowercase:", myString.lower())
+print("Replace 'World' with 'Python':", myString.replace("World", "Python"))
+print("Find 'o':", myString.find("o"))
+print("Split by comma:", myString.split(","))
+print("Is alphabetic:", myString.isalpha())
+print("Is numeric:", myString.isdigit())
+print("Strip whitespace:", "   Hello   ".strip())
+print("Count 'l':", myString.count("l"))
+print("Starts with 'Hello':", myString.startswith("Hello"))
+print("Ends with '!':", myString.endswith("!"))
+print("Format string:", "Name: {}, Age: {}".format("Alice", 30))
+print("F-string:", f"Name: {'Bob'}, Age: {25}")
+print("Reversed string:", myString[::-1])
+print("Substring with step 2:", myString[::2])
+print("Index of 'W':", myString.index("W"))
+print("Join list into string:", "-".join(["2024", "06", "15"]))
+
+print("----------Collections----------")
+# Collections Module
+from collections import Counter, namedtuple, deque, OrderedDict, defaultdict
+
+# Counter
+string = "aaaaaabbbbbbbccccdde"
+counter = Counter(string)
+print(counter)
+
+print(counter.most_common(2))     # Returns list of tuples (element, count) of the two most common elements
+print(counter.most_common(2)[0])  # Returns the first tuple (element, count) of the two most common elements
+print(counter.most_common(2)[0][1]) #returns count/value of the first tuple
+
+print(list(counter.elements())) # Returns a list of elements repeated as per their counts
+
+# namedtuple
+Point = namedtuple('Point', ['x', 'y'])
+p = Point(10, 20)
+print(p)
+print(p.x, p.y)
+
+# ordereddict : not important after python 3.7+
+# defaultdict
+dd = defaultdict(int)
+dd['a'] += 1
+dd['b'] += 2
+print(dd['c'])  # Outputs 0 since 'c' is not present and default factory is int
+
+try:
+    dd_none = dict()  # reg dict with no default factory provided
+    print(dd_none['x'])  # This will raise a KeyError since 'x' is not present in the dictionary
+except KeyError as e:
+    print(f"KeyError: {e}")
+
+# deque
+dq = deque([1, 2, 3])
+dq.append(4)
+dq.appendleft(0)    
+print(dq)
+
+dq.pop()
+dq.popleft()
+print(dq)
+
+dq.extend([5, 6, 7])
+dq.extendleft([-2, -1])  # Note: extends to the left in reverse
+print(dq)
+
+dq.rotate(2)  # Rotate right by 2
+print(dq)
+
+dq.rotate(-3)  # Rotate left by 3
+print(dq)
+
+print("------------Itertools--------")
+# Itertools Module: product, permutations, combinations, accumulate, groupby, infinite iterators
+import itertools
+
+

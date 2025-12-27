@@ -8,5 +8,15 @@
 
 # Set : unordered, mutable, no duplicates
 
+# String : ordered, immutable, text prepresentation 
+
+# Collections: Counter, namedtuple, orderedDict, defaultDict, deque
+- deque: can add or remove elements from both side
+
+# Itertools : a collection of tools for handling iterators
+
 #Terminologies
--Immutable : means cannot be changed after it’s created, cannot add / remove / modify existing elements
+- Immutable : means cannot be changed after it’s created, cannot add / remove / modify existing elements
+- Concatenate : to join things together in order, end-to-end
+- at Runtime : When the program is actually running (executing) — after you press Run or start the program. Ex: zero division err
+- at Compiletime : Happens before the program runs, things checked: syntax err, type checking, missing var/func. Ex: syntax err
