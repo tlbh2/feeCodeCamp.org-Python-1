@@ -4,5 +4,9 @@
 
 # Tuple : ordered, immutable, allow duplicate elements, allow diff type, use index
 
+# Dictionary: key-value pairs, unordered, mutable
+
+# Set : unordered, mutable, no duplicates
+
 #Terminologies
 -Immutable : means cannot be changed after it’s created, cannot add / remove / modify existing elements
