@@ -247,10 +247,76 @@ print("------------Itertools--------")
 # Itertools Module: product, permutations, combinations, accumulate, groupby, infinite iterators
 from itertools import product, permutations, combinations, accumulate, groupby, count, cycle, repeat
 
-# Product
+# Product : gives out all possible combinations by taking one element from each iterable
 a = [1, 2]
 b = ['A', 'B']
 prod = product(a, b)
 print(prod) # Prints the product object
 print(list(prod)) # Converts to list 
 
+# Permutations
+c = [1, 2, 3]
+perm = permutations(c)
+print(list(perm))
+
+perm = permutations(c,2) #length 2
+print(list(perm)) #different orderings with length 2
+
+# Combinations
+d = [1, 2, 3, 4]
+comb = combinations(d, 2) #length 2
+print(list(comb))
+
+comb = combinations(d, 3) #length 3
+print(list(comb))
+
+from itertools import combinations_with_replacement
+comb_wr = combinations_with_replacement(d, 2)
+print(list(comb_wr))
+
+# Accumulate
+e = [1, 2, 3, 4]
+acc = accumulate(e) # by default does sum
+print(list(acc))
+
+import operator
+acc_mul = accumulate(e, func=operator.mul) # multiplication
+print(list(acc_mul))
+
+acc_max = accumulate(e, func=max) # maximum value
+print(list(acc_max))
+
+# Groupby
+persons = [
+    {'name': 'Alice', 'age': 30},
+    {'name': 'Bob', 'age': 25},
+    {'name': 'Charlie', 'age': 30},
+    {'name': 'David', 'age': 25}
+]
+
+# Note: groupby requires the input to be sorted by the key for correct grouping
+persons = sorted(persons, key=lambda x: x['age'])
+
+grouped_persons = groupby(persons, key=lambda x: x['age'])
+for key, value in grouped_persons:
+    print(key, list(value))
+
+# Infinite Iterators
+from itertools import count, cycle, repeat
+
+#count
+for i in count(12): # start val of 12, infinite loop until break condition
+    print(i)
+    if i == 15:
+        break
+
+#cycle
+f = [1,2,3]
+for i in cycle(f): 
+    print(i)
+    if i == 3:
+        break
+
+# repeat
+for i in repeat('Hello', 3): # repeats 'Hello' 3 times
+    print(i)

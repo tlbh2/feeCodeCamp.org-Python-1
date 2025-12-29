@@ -14,6 +14,7 @@
 - deque: can add or remove elements from both side
 
 # Itertools : a collection of tools for handling iterators
+- groupby : always sort the list with the same key before groupby because it only groups consecutive items with the same key
 
 #Terminologies
 - Immutable : means cannot be changed after it’s created, cannot add / remove / modify existing elements
