@@ -245,6 +245,12 @@ print(dq)
 
 print("------------Itertools--------")
 # Itertools Module: product, permutations, combinations, accumulate, groupby, infinite iterators
-import itertools
+from itertools import product, permutations, combinations, accumulate, groupby, count, cycle, repeat
 
+# Product
+a = [1, 2]
+b = ['A', 'B']
+prod = product(a, b)
+print(prod) # Prints the product object
+print(list(prod)) # Converts to list 
 
