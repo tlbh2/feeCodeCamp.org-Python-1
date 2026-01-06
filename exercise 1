@@ -1,0 +1,295 @@
+
+
+## 🟢 Level 1 — Core Data Structures (must-master)
+
+### 1️⃣ Frequency Counter (Counter / dict)
+
+**Problem**
+Given a string, return the character that appears most frequently.
+
+```python
+s = "leetcodepractice"
+```
+
+**Practice:**
+
+* `Counter`
+* `max()`
+* dictionary iteration
+
+**LeetCode prep:**
+
+* Majority Element
+* First Unique Character in a String
+
+---
+
+### 2️⃣ Anagram Checker
+
+**Problem**
+Return `True` if two strings are anagrams, else `False`.
+
+```python
+s = "listen"
+t = "silent"
+```
+
+**Rules:**
+
+* Use `Counter`
+* No sorting allowed
+
+**LeetCode prep:**
+
+* Valid Anagram
+
+---
+
+### 3️⃣ Group Anagrams (VERY IMPORTANT)
+
+**Problem**
+Group words that are anagrams.
+
+```python
+words = ["eat","tea","tan","ate","nat","bat"]
+```
+
+**Output**
+
+```python
+[["eat","tea","ate"], ["tan","nat"], ["bat"]]
+```
+
+**Practice:**
+
+* `defaultdict(list)`
+* tuple keys
+
+**LeetCode prep:**
+
+* Group Anagrams (classic)
+
+---
+
+### 4️⃣ First Non-Repeating Character
+
+**Problem**
+Return the first character that appears exactly once.
+
+```python
+s = "aabbccddef"
+```
+
+**Practice:**
+
+* `Counter`
+* iteration order
+
+---
+
+## 🟡 Level 2 — Iteration, grouping, itertools
+
+### 5️⃣ Cartesian Product Without `product`
+
+**Problem**
+Given two lists, return all possible pairs.
+
+```python
+a = [1, 2]
+b = ["A", "B"]
+```
+
+**Constraint:**
+
+* Solve using nested loops first
+* Then refactor using `itertools.product`
+
+**LeetCode prep:**
+
+* Backtracking intuition
+* Matrix traversal
+
+---
+
+### 6️⃣ Subsets of Size K
+
+**Problem**
+Return all subsets of size `k`.
+
+```python
+nums = [1, 2, 3, 4]
+k = 2
+```
+
+**Practice:**
+
+* `itertools.combinations`
+
+**LeetCode prep:**
+
+* Subsets
+* Combinations
+
+---
+
+### 7️⃣ Running Sum / Product
+
+**Problem**
+Return running sum and running product.
+
+```python
+nums = [1, 2, 3, 4]
+```
+
+**Practice:**
+
+* `accumulate`
+* custom function (`operator.mul`)
+
+**LeetCode prep:**
+
+* Running Sum of 1d Array
+* Prefix product
+
+---
+
+### 8️⃣ Group By Key (groupby trap problem)
+
+**Problem**
+Group people by age.
+
+```python
+persons = [
+    {'name': 'Alice', 'age': 30},
+    {'name': 'Bob', 'age': 25},
+    {'name': 'Charlie', 'age': 30}
+]
+```
+
+**Rules:**
+
+* Must sort first
+* Use `groupby`
+
+**LeetCode prep:**
+
+* Data grouping
+* Log analysis
+
+---
+
+## 🔵 Level 3 — Sets, logic, edge cases
+
+### 9️⃣ Intersection of Two Arrays
+
+**Problem**
+Return the unique intersection of two lists.
+
+```python
+a = [1,2,2,1]
+b = [2,2]
+```
+
+**Practice:**
+
+* `set`
+* intersection
+
+**LeetCode prep:**
+
+* Intersection of Two Arrays
+
+---
+
+### 🔟 Longest Consecutive Sequence
+
+**Problem**
+Find the length of the longest consecutive elements sequence.
+
+```python
+nums = [100,4,200,1,3,2]
+```
+
+**Practice:**
+
+* `set`
+* O(n) logic
+
+**LeetCode prep:**
+
+* Longest Consecutive Sequence (top-tier problem)
+
+---
+
+## 🟣 Level 4 — Deque & Sliding Window
+
+### 1️⃣1️⃣ Sliding Window Maximum (simplified)
+
+**Problem**
+Given a window size `k`, find the max in each window.
+
+```python
+nums = [1,3,-1,-3,5,3,6,7]
+k = 3
+```
+
+**Practice:**
+
+* `deque`
+* window logic
+
+**LeetCode prep:**
+
+* Sliding Window Maximum
+
+---
+
+### 1️⃣2️⃣ Valid Parentheses (deque as stack)
+
+**Problem**
+Check if parentheses are valid.
+
+```python
+s = "()[]{}"
+```
+
+**Practice:**
+
+* `deque`
+* stack behavior
+
+**LeetCode prep:**
+
+* Valid Parentheses
+
+---
+
+## 🔥 Bonus: Infinite iterator thinking
+
+### 1️⃣3️⃣ Generate First N Cycles
+
+**Problem**
+Cycle through `[1,2,3]` and return first `n` values.
+
+```python
+n = 10
+```
+
+**Practice:**
+
+* `cycle`
+* break condition
+
+---
+
+## How to practice (important)
+
+For each problem:
+
+1. Solve **without** `itertools`
+2. Solve **with** `itertools`
+3. Ask yourself:
+
+   > “What pattern is this training?”
+
+

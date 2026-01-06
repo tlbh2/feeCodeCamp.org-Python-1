@@ -284,7 +284,7 @@ acc_mul = accumulate(e, func=operator.mul) # multiplication
 print(list(acc_mul))
 
 acc_max = accumulate(e, func=max) # maximum value
-print(list(acc_max))
+print(list(acc_max)) 
 
 # Groupby
 persons = [
@@ -320,3 +320,5 @@ for i in cycle(f):
 # repeat
 for i in repeat('Hello', 3): # repeats 'Hello' 3 times
     print(i)
+
+print("---------------------exercise 1-----------------------")
